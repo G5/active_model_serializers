@@ -1,7 +1,7 @@
 require 'active_model/array_serializer_9'
 require 'active_model/serializable_9'
-require 'active_model/serializer/association'
-require 'active_model/serializer/config'
+require 'active_model/serializer_9/association'
+require 'active_model/serializer_9/config'
 
 require 'thread'
 
@@ -43,7 +43,7 @@ module ActiveModel
 ** Notice: embed is deprecated. **
 The use of .embed method on a Serializer will be soon removed, as this should have a global scope and not a class scope.
 Please use the global .setup method instead:
-ActiveModel::Serializer.setup do |config|
+ActiveModel::Serializer9.setup do |config|
   config.embed = :#{type}
   config.embed_in_root = #{CONFIG.embed_in_root || false}
 end

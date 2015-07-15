@@ -1,6 +1,6 @@
 require 'active_model/default_serializer_9'
-require 'active_model/serializer/association/has_one'
-require 'active_model/serializer/association/has_many'
+require 'active_model/serializer_9/association/has_one'
+require 'active_model/serializer_9/association/has_many'
 
 module ActiveModel
   class Serializer9

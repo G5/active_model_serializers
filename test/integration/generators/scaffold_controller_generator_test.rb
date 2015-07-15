@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'rails'
-require 'active_model/serializer/railtie'
+require 'active_model/serializer_9/railtie'
 require 'test_app'
 
 class ScaffoldControllerGeneratorTest < Rails::Generators::TestCase

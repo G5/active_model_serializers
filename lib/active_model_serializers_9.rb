@@ -1,8 +1,8 @@
 require 'active_model'
-require 'active_model/serializer'
-require 'active_model/serializer_support'
-require 'active_model/serializer/version'
-require 'active_model/serializer/railtie' if defined?(Rails)
+require 'active_model/serializer_9'
+require 'active_model/serializer_9_support'
+require 'active_model/serializer_9/version'
+require 'active_model/serializer_9/railtie' if defined?(Rails)
 
 begin
   require 'action_controller'

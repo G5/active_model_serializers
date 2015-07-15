@@ -2,9 +2,9 @@ module ActiveModel
   class Railtie < Rails::Railtie
     initializer 'generators' do |app|
       app.load_generators
-      require 'active_model/serializer/generators/serializer/serializer_generator'
-      require 'active_model/serializer/generators/serializer/scaffold_controller_generator'
-      require 'active_model/serializer/generators/resource_override'
+      require 'active_model/serializer_9/generators/serializer/serializer_generator'
+      require 'active_model/serializer_9/generators/serializer/scaffold_controller_generator'
+      require 'active_model/serializer_9/generators/resource_override'
     end
 
     initializer 'include_routes.active_model_serializer' do |app|
