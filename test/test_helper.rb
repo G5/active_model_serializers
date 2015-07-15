@@ -1,6 +1,6 @@
 require 'bundler/setup'
 require 'minitest/autorun'
-require 'active_model_serializers'
+require 'active_model_serializers_9'
 require 'fixtures/poro'
 
 # Ensure backward compatibility with Minitest 4

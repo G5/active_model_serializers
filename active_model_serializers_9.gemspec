@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.files         = Dir['README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'DESIGN.textile', 'MIT-LICENSE', 'lib/**/*', 'test/**/*']
   gem.test_files    = Dir['test/**/*']
 
-  gem.name          = "active_model_serializers"
+  gem.name          = "active_model_serializers_9"
   gem.require_paths = ["lib"]
   gem.version       = ActiveModel::Serializer9::VERSION
 
