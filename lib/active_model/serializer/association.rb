@@ -1,4 +1,4 @@
-require 'active_model/default_serializer'
+require 'active_model/default_serializer_9'
 require 'active_model/serializer/association/has_one'
 require 'active_model/serializer/association/has_many'
 
@@ -47,7 +47,7 @@ module ActiveModel
       end
 
       def default_serializer
-        DefaultSerializer
+        DefaultSerializer9
       end
 
       def build_serializer(object, options = {})

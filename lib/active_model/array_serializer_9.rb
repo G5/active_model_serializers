@@ -1,4 +1,4 @@
-require 'active_model/default_serializer'
+require 'active_model/default_serializer_9'
 require 'active_model/serializable_9'
 
 module ActiveModel
@@ -35,7 +35,7 @@ module ActiveModel
     end
 
     def serializer_for(item)
-      serializer_class = @each_serializer || Serializer.serializer_for(item, namespace: @namespace) || DefaultSerializer
+      serializer_class = @each_serializer || Serializer.serializer_for(item, namespace: @namespace) || DefaultSerializer9
       serializer_class.new(item, scope: scope, key_format: key_format, context: @context, only: @only, except: @except, polymorphic: @polymorphic, namespace: @namespace)
     end
 

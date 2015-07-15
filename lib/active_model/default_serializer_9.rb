@@ -1,10 +1,10 @@
 require 'active_model/serializable_9'
 
 module ActiveModel
-  # DefaultSerializer
+  # DefaultSerializer9
   #
   # Provides a constant interface for all items
-  class DefaultSerializer
+  class DefaultSerializer9
     include ActiveModel::Serializable9
 
     attr_reader :object
