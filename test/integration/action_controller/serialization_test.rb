@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActionController
-  module Serialization
+  module Serialization9
     class ImplicitSerializerTest < ActionController::TestCase
       class MyController < ActionController::Base
         def render_using_implicit_serializer

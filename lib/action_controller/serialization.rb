@@ -24,7 +24,7 @@ module ActionController
   #      end
   #    end
   #
-  module Serialization
+  module Serialization9
     extend ActiveSupport::Concern
 
     include ActionController::Renderers
