@@ -1,5 +1,5 @@
 require 'active_model/array_serializer_9'
-require 'active_model/serializable'
+require 'active_model/serializable_9'
 require 'active_model/serializer/association'
 require 'active_model/serializer/config'
 
@@ -7,7 +7,7 @@ require 'thread'
 
 module ActiveModel
   class Serializer
-    include Serializable
+    include Serializable9
 
     @mutex = Mutex.new
 

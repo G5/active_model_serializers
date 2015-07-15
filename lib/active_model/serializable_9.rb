@@ -1,7 +1,7 @@
 require 'active_model/serializable/utils'
 
 module ActiveModel
-  module Serializable
+  module Serializable9
     def self.included(base)
       base.extend Utils
     end

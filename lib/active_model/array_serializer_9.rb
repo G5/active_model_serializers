@@ -1,9 +1,9 @@
 require 'active_model/default_serializer'
-require 'active_model/serializable'
+require 'active_model/serializable_9'
 
 module ActiveModel
   class ArraySerializer9
-    include Serializable
+    include Serializable9
 
     class << self
       attr_accessor :_root

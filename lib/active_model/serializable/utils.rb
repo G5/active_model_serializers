@@ -1,5 +1,5 @@
 module ActiveModel
-  module Serializable
+  module Serializable9
     module Utils
       extend self
 
