@@ -1,4 +1,4 @@
-require 'active_model/array_serializer'
+require 'active_model/array_serializer_9'
 require 'active_model/serializable'
 require 'active_model/serializer/association'
 require 'active_model/serializer/config'
@@ -62,7 +62,7 @@ end
           if Object.constants.include?(:ArraySerializer)
             ::ArraySerializer
           else
-            ArraySerializer
+            ArraySerializer9
           end
         else
           _const_get build_serializer_class(resource, options)

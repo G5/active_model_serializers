@@ -1,17 +1,17 @@
 require 'test_helper'
 
 module ActiveModel
-  class ArraySerializer
+  class ArraySerializer9
     class RootAsOptionTest < Minitest::Test
       def setup
-        @old_root = ArraySerializer._root
+        @old_root = ArraySerializer9._root
         @profile1 = Profile.new({ name: 'Name 1', description: 'Description 1', comments: 'Comments 1' })
         @profile2 = Profile.new({ name: 'Name 2', description: 'Description 2', comments: 'Comments 2' })
-        @serializer = ArraySerializer.new([@profile1, @profile2], root: :initialize)
+        @serializer = ArraySerializer9.new([@profile1, @profile2], root: :initialize)
       end
 
       def teardown
-        ArraySerializer._root = @old_root
+        ArraySerializer9._root = @old_root
       end
 
       def test_root_is_not_displayed_using_serializable_array
@@ -40,8 +40,8 @@ module ActiveModel
       end
 
       def test_using_false_root_in_initialize_takes_precedence
-        ArraySerializer._root = 'root'
-        @serializer = ArraySerializer.new([@profile1, @profile2], root: false)
+        ArraySerializer9._root = 'root'
+        @serializer = ArraySerializer9.new([@profile1, @profile2], root: false)
 
         assert_equal([
           { name: 'Name 1', description: 'Description 1' },
@@ -52,16 +52,16 @@ module ActiveModel
 
     class RootInSerializerTest < Minitest::Test
       def setup
-        @old_root = ArraySerializer._root
-        ArraySerializer._root = :in_serializer
+        @old_root = ArraySerializer9._root
+        ArraySerializer9._root = :in_serializer
         @profile1 = Profile.new({ name: 'Name 1', description: 'Description 1', comments: 'Comments 1' })
         @profile2 = Profile.new({ name: 'Name 2', description: 'Description 2', comments: 'Comments 2' })
-        @serializer = ArraySerializer.new([@profile1, @profile2])
-        @rooted_serializer = ArraySerializer.new([@profile1, @profile2], root: :initialize)
+        @serializer = ArraySerializer9.new([@profile1, @profile2])
+        @rooted_serializer = ArraySerializer9.new([@profile1, @profile2], root: :initialize)
       end
 
       def teardown
-        ArraySerializer._root = @old_root
+        ArraySerializer9._root = @old_root
       end
 
       def test_root_is_not_displayed_using_serializable_hash

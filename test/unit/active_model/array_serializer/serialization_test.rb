@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class ArraySerializer
+  class ArraySerializer9
     class BasicObjectsSerializationTest < Minitest::Test
       def setup
         array = [1, 2, 3]
@@ -9,7 +9,7 @@ module ActiveModel
       end
 
       def test_serializer_for_array_returns_appropriate_type
-        assert_kind_of ActiveModel::ArraySerializer, @serializer
+        assert_kind_of ActiveModel::ArraySerializer9, @serializer
       end
 
       def test_array_serializer_serializes_simple_objects
@@ -56,7 +56,7 @@ module ActiveModel
       def test_array_serializer_serializes_models
         array = [Profile.new({ name: 'Name 1', description: 'Description 1', comments: 'Comments 1' }),
                  Profile.new({ name: 'Name 2', description: 'Description 2', comments: 'Comments 2' })]
-        serializer = ArraySerializer.new(array)
+        serializer = ArraySerializer9.new(array)
 
         expected = [{ name: 'Name 1', description: 'Description 1' },
                     { name: 'Name 2', description: 'Description 2' }]
@@ -68,7 +68,7 @@ module ActiveModel
       def test_array_serializers_each_serializer
         array = [::Model.new({ name: 'Name 1', description: 'Description 1', comments: 'Comments 1' }),
                  ::Model.new({ name: 'Name 2', description: 'Description 2', comments: 'Comments 2' })]
-        serializer = ArraySerializer.new(array, each_serializer: ProfileSerializer)
+        serializer = ArraySerializer9.new(array, each_serializer: ProfileSerializer)
 
         expected = [{ name: 'Name 1', description: 'Description 1' },
                     { name: 'Name 2', description: 'Description 2' }]
@@ -96,7 +96,7 @@ module ActiveModel
           Comment.new(content: 'C4')
         ]
 
-        @serializer = ArraySerializer.new([@post1, @post2], root: :posts)
+        @serializer = ArraySerializer9.new([@post1, @post2], root: :posts)
         assert_equal({
             posts: [
               {title: "Title 1", body: "Body 1", "comment_ids" => @post1.comments.map(&:object_id) },
@@ -134,7 +134,7 @@ module ActiveModel
           end
         end
 
-        @serializer = ArraySerializer.new([@user1, @user2]) #, root: :posts)
+        @serializer = ArraySerializer9.new([@user1, @user2]) #, root: :posts)
         assert_equal([
           { name: "User 1", email: "email1@server.com", profile: nil },
           { name: "User 2", email: "email2@server.com", profile: { name: 'Name 1', description: 'Desc 1' } }
@@ -165,7 +165,7 @@ module ActiveModel
           end
         end
 
-        @serializer = ArraySerializer.new([@user1, @user2], root: :users)
+        @serializer = ArraySerializer9.new([@user1, @user2], root: :users)
         assert_equal({
             users: [
               { name: "User 1", email: "email1@server.com", 'profile_id' => nil },
@@ -201,7 +201,7 @@ module ActiveModel
           end
         end
 
-        @serializer = ArraySerializer.new([@user1, @user2], root: :users)
+        @serializer = ArraySerializer9.new([@user1, @user2], root: :users)
         assert_equal({
             users: [
               { name: "User 1", email: "email1@server.com", 'profile_id' => nil },

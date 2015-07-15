@@ -13,7 +13,7 @@ module ActiveModel
 
         def serializer_class(object, _)
           if use_array_serializer?
-            ArraySerializer
+            ArraySerializer9
           else
             serializer_from_options
           end
@@ -31,7 +31,7 @@ module ActiveModel
 
         def use_array_serializer?
           !serializer_from_options ||
-            serializer_from_options && !(serializer_from_options <= ArraySerializer)
+            serializer_from_options && !(serializer_from_options <= ArraySerializer9)
         end
       end
     end

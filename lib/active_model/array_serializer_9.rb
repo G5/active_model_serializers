@@ -2,7 +2,7 @@ require 'active_model/default_serializer'
 require 'active_model/serializable'
 
 module ActiveModel
-  class ArraySerializer
+  class ArraySerializer9
     include Serializable
 
     class << self
