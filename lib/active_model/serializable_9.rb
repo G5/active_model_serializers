@@ -52,7 +52,7 @@ module ActiveModel
         payload[:payload] = self.instance_variable_get(:"@#{key}")
         payload
       end
-      ActiveSupport::Notifications.instrument("#{action}.active_model_serializers", payload, &block)
+      ActiveSupport::Notifications.instrument("#{action}.active_model_serializers_9", payload, &block)
     end
 
     def instrumentation_keys

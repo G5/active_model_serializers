@@ -10,14 +10,14 @@ module ActionController
     def setup_serialization_subscriptions
       @serializers = Hash.new(0)
 
-      ActiveSupport::Notifications.subscribe("!serialize.active_model_serializers") do |name, start, finish, id, payload|
+      ActiveSupport::Notifications.subscribe("!serialize.active_model_serializers_9") do |name, start, finish, id, payload|
         serializer = payload[:serializer]
         @serializers[serializer] += 1
       end
     end
 
     def teardown_serialization_subscriptions
-      ActiveSupport::Notifications.unsubscribe("!serialize.active_model_serializers")
+      ActiveSupport::Notifications.unsubscribe("!serialize.active_model_serializers_9")
     end
 
     def process(*args)
