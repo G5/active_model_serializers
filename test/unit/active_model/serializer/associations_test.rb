@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class AssociationsTest < Minitest::Test
       def test_associations_inheritance
         inherited_serializer_klass = Class.new(PostSerializer) do

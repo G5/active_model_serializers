@@ -81,17 +81,17 @@ end
 ###
 ## Serializers
 ###
-class UserSerializer < ActiveModel::Serializer
+class UserSerializer < ActiveModel::Serializer9
   attributes :name, :email
 
   has_one :profile
 end
 
-class UserInfoSerializer < ActiveModel::Serializer
+class UserInfoSerializer < ActiveModel::Serializer9
   has_one :user, serializer: UserSerializer
 end
 
-class ProfileSerializer < ActiveModel::Serializer
+class ProfileSerializer < ActiveModel::Serializer9
   def description
     description = object.read_attribute_for_serialization(:description)
     scope ? "#{description} - #{scope}" : description
@@ -100,13 +100,13 @@ class ProfileSerializer < ActiveModel::Serializer
   attributes :name, :description
 end
 
-class CategorySerializer < ActiveModel::Serializer
+class CategorySerializer < ActiveModel::Serializer9
   attributes :name
 
   has_many :posts
 end
 
-class PostSerializer < ActiveModel::Serializer
+class PostSerializer < ActiveModel::Serializer9
   attributes :title, :body
 
   def title
@@ -119,17 +119,17 @@ class PostSerializer < ActiveModel::Serializer
   has_many :comments
 end
 
-class SpecialPostSerializer < ActiveModel::Serializer
+class SpecialPostSerializer < ActiveModel::Serializer9
   attributes :title, :body
   has_many :comments, root: :comments, embed_in_root: true, embed: :ids
   has_one :special_comment, root: :comments, embed_in_root: true, embed: :ids
 end
 
-class CommentSerializer < ActiveModel::Serializer
+class CommentSerializer < ActiveModel::Serializer9
   attributes :content
 end
 
-class WebLogSerializer < ActiveModel::Serializer
+class WebLogSerializer < ActiveModel::Serializer9
   attributes :name, :display_name
 end
 
@@ -137,23 +137,23 @@ class WebLogLowerCamelSerializer < WebLogSerializer
   format_keys :lower_camel
 end
 
-class InterviewSerializer < ActiveModel::Serializer
+class InterviewSerializer < ActiveModel::Serializer9
   attributes :text
 
   has_one :attachment, polymorphic: true
 end
 
-class MailSerializer < ActiveModel::Serializer
+class MailSerializer < ActiveModel::Serializer9
   attributes :body
 
   has_many :attachments, polymorphic: true
 end
 
-class ImageSerializer < ActiveModel::Serializer
+class ImageSerializer < ActiveModel::Serializer9
   attributes :url
 end
 
-class VideoSerializer < ActiveModel::Serializer
+class VideoSerializer < ActiveModel::Serializer9
   attributes :html
 end
 
@@ -164,23 +164,23 @@ module TestNamespace
   class UserSerializer    < ::UserSerializer;    end
 end
 
-ActiveModel::Serializer.setup do |config|
+ActiveModel::Serializer9.setup do |config|
   config.default_key_type = :name
 end
 
-class NameKeyUserSerializer < ActiveModel::Serializer
+class NameKeyUserSerializer < ActiveModel::Serializer9
   attributes :name, :email
 
   has_one :profile
 end
 
-class NameKeyPostSerializer < ActiveModel::Serializer
+class NameKeyPostSerializer < ActiveModel::Serializer9
   attributes :title, :body
   
   has_many :comments
 end
 
-ActiveModel::Serializer.setup do |config|
+ActiveModel::Serializer9.setup do |config|
   config.default_key_type = nil
 end
 

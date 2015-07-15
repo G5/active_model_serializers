@@ -59,7 +59,7 @@ module ActionController
         e = assert_raise ArgumentError do
           assert_serializer Hash
         end
-        assert_match 'assert_serializer only accepts a String, Symbol, Regexp, ActiveModel::Serializer, or nil', e.message
+        assert_match 'assert_serializer only accepts a String, Symbol, Regexp, ActiveModel::Serializer9, or nil', e.message
       end
 
       def test_does_not_overwrite_notification_subscriptions

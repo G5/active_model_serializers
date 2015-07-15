@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class UrlHelpersTest < Minitest::Test
       include Rails.application.routes.url_helpers
 
@@ -18,7 +18,7 @@ module ActiveModel
       end
 
       def test_url_helpers_are_available
-        serializer = Class.new(ActiveModel::Serializer) do
+        serializer = Class.new(ActiveModel::Serializer9) do
           attributes :url
 
           def url

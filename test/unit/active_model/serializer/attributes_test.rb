@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class AttributesTest < Minitest::Test
       def setup
         @profile = Profile.new({ name: 'Name 1', description: 'Description 1', comments: 'Comments 1' })
@@ -44,7 +44,7 @@ module ActiveModel
           end
         end
 
-        serializer = Class.new(ActiveModel::Serializer) do
+        serializer = Class.new(ActiveModel::Serializer9) do
           attributes :strip?
         end
 

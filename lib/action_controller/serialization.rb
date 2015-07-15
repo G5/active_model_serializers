@@ -68,7 +68,7 @@ module ActionController
         o[:namespace] = namespace_for_serializer if namespace_for_serializer
       end
 
-      ActiveModel::Serializer.serializer_for(resource, options)
+      ActiveModel::Serializer9.serializer_for(resource, options)
     end
 
     def default_serializer_options

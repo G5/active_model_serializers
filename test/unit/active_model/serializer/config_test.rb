@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class Config
       class Test < Minitest::Test
         def test_config_const_is_an_instance_of_config
@@ -32,7 +32,7 @@ module ActiveModel
 
       class ConfigTest < Minitest::Test
         def test_setup
-          Serializer.setup do |config|
+          Serializer9.setup do |config|
             config.a = 'v1'
             config.b = 'v2'
           end
@@ -44,7 +44,7 @@ module ActiveModel
         end
 
         def test_config_accessors
-          Serializer.setup do |config|
+          Serializer9.setup do |config|
             config.foo = 'v1'
             config.bar = 'v2'
           end

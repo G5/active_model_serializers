@@ -2,7 +2,7 @@ require 'test_helper'
 require 'fixtures/active_record'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class ActiveRecordTest < Minitest::Test
       def setup
         @post = ARPost.first

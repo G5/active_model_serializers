@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class HasOneAndHasManyTest < Minitest::Test
       def setup
         @post = SpecialPost.new({ title: 'T1', body: 'B1'})

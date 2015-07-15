@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class RootAsOptionTest < Minitest::Test
       def setup
         @old_root = ProfileSerializer._root

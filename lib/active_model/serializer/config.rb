@@ -1,5 +1,5 @@
 module ActiveModel
-  class Serializer
+  class Serializer9
     class Config
       def initialize(data = {})
         @data = data

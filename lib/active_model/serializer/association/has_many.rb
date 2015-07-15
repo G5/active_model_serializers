@@ -1,5 +1,5 @@
 module ActiveModel
-  class Serializer
+  class Serializer9
     class Association
       class HasMany < Association
         def initialize(name, *args)

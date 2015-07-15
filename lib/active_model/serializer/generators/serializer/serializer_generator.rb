@@ -29,7 +29,7 @@ module Rails
                (Object.const_get(:ApplicationSerializer) rescue nil)
           'ApplicationSerializer'
         else
-          'ActiveModel::Serializer'
+          'ActiveModel::Serializer9'
         end
       end
     end

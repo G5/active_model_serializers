@@ -51,7 +51,7 @@ module ActionController
       msg = message || "expecting <#{options.inspect}> but rendering with <#{rendered.keys}>"
 
       matches_serializer = case options
-                           when lambda { |options| options.kind_of?(Class) && options < ActiveModel::Serializer }
+                           when lambda { |options| options.kind_of?(Class) && options < ActiveModel::Serializer9 }
                              rendered.any? do |serializer, count|
                                options.name == serializer
                              end
@@ -71,7 +71,7 @@ module ActionController
                            when NilClass
                              rendered.blank?
                            else
-                             raise ArgumentError, "assert_serializer only accepts a String, Symbol, Regexp, ActiveModel::Serializer, or nil"
+                             raise ArgumentError, "assert_serializer only accepts a String, Symbol, Regexp, ActiveModel::Serializer9, or nil"
                            end
       assert matches_serializer, msg
     end

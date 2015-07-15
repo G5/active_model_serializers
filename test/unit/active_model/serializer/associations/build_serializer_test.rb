@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class Association
       class BuildSerializerTest < Minitest::Test
         def setup

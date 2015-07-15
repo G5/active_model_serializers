@@ -15,4 +15,4 @@ module ActiveModel
   end
 end
 
-ActiveSupport.run_load_hooks(:active_model_serializers, ActiveModel::Serializer)
+ActiveSupport.run_load_hooks(:active_model_serializers, ActiveModel::Serializer9)

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class HasManyPolymorphicTest < ActiveModel::TestCase
       def setup
         @association = MailSerializer._associations[:attachments]
@@ -163,7 +163,7 @@ module ActiveModel
       def test_associations_using_a_given_serializer
         @association.embed = :ids
         @association.embed_in_root = true
-        @association.serializer_from_options = Class.new(ActiveModel::Serializer) do
+        @association.serializer_from_options = Class.new(ActiveModel::Serializer9) do
           def fake
             'fake'
           end

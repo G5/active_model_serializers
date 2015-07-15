@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class OptionsTest < Minitest::Test
       def setup
         @serializer = ProfileSerializer.new(nil, context: {foo: :bar})

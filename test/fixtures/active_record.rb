@@ -53,28 +53,28 @@ end
 class ARSection < ActiveRecord::Base
 end
 
-class ARPostSerializer < ActiveModel::Serializer
+class ARPostSerializer < ActiveModel::Serializer9
   attributes :title, :body
 
   has_many :ar_comments, :ar_tags
   has_one  :ar_section
 end
 
-class ARCommentSerializer < ActiveModel::Serializer
+class ARCommentSerializer < ActiveModel::Serializer9
   attributes :body
 
   has_many :ar_tags
 end
 
-class ARTagSerializer < ActiveModel::Serializer
+class ARTagSerializer < ActiveModel::Serializer9
   attributes :name
 end
 
-class ARSectionSerializer < ActiveModel::Serializer
+class ARSectionSerializer < ActiveModel::Serializer9
   attributes 'name'
 end
 
-class AREmbeddedSerializer < ActiveModel::Serializer
+class AREmbeddedSerializer < ActiveModel::Serializer9
   has_many :ar_tags, :ar_comments
 end
 

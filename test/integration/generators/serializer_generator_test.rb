@@ -12,7 +12,7 @@ class SerializerGeneratorTest < Rails::Generators::TestCase
 
   def test_generates_a_serializer_with_attributes_and_associations
     run_generator
-    assert_file 'app/serializers/account_serializer.rb', /class AccountSerializer < ActiveModel::Serializer/ do |serializer|
+    assert_file 'app/serializers/account_serializer.rb', /class AccountSerializer < ActiveModel::Serializer9/ do |serializer|
       assert_match(/attributes :id, :name, :description/, serializer)
       assert_match(/has_one :business/, serializer)
     end
@@ -20,7 +20,7 @@ class SerializerGeneratorTest < Rails::Generators::TestCase
 
   def test_generates_a_namespaced_serializer
     run_generator ['admin/account']
-    assert_file 'app/serializers/admin/account_serializer.rb', /class Admin::AccountSerializer < ActiveModel::Serializer/
+    assert_file 'app/serializers/admin/account_serializer.rb', /class Admin::AccountSerializer < ActiveModel::Serializer9/
   end
 
   def test_uses_application_serializer_if_one_exists

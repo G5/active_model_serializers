@@ -6,7 +6,7 @@ require 'active_model/serializer/config'
 require 'thread'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     include Serializable9
 
     @mutex = Mutex.new

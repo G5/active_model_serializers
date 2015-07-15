@@ -5,7 +5,7 @@ module ActiveModel
     class BasicObjectsSerializationTest < Minitest::Test
       def setup
         array = [1, 2, 3]
-        @serializer = Serializer.serializer_for(array).new(array)
+        @serializer = Serializer9.serializer_for(array).new(array)
       end
 
       def test_serializer_for_array_returns_appropriate_type
@@ -23,7 +23,7 @@ module ActiveModel
         Object.const_set(:ArraySerializer, Class.new)
 
         array = [1, 2, 3]
-        @serializer_class = Serializer.serializer_for(array)
+        @serializer_class = Serializer9.serializer_for(array)
       end
 
       def teardown
@@ -48,7 +48,7 @@ module ActiveModel
         object = {}
         def object.serializer_class; CustomSerializer; end
 
-        assert_equal CustomSerializer, Serializer.serializer_for(object)
+        assert_equal CustomSerializer, Serializer9.serializer_for(object)
       end
     end
 

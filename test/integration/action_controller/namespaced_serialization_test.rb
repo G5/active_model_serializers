@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActionController
-  module Serialization
+  module Serialization9
     class NamespacedSerializationTest < ActionController::TestCase
       class TestNamespace::MyController < ActionController::Base
         def render_profile_with_namespace

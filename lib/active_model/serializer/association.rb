@@ -3,7 +3,7 @@ require 'active_model/serializer/association/has_one'
 require 'active_model/serializer/association/has_many'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class Association
       def initialize(name, options={})
         if options.has_key?(:include)
@@ -43,7 +43,7 @@ module ActiveModel
       end
 
       def serializer_from_object(object, options = {})
-        Serializer.serializer_for(object, options)
+        Serializer9.serializer_for(object, options)
       end
 
       def default_serializer

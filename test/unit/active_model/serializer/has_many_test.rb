@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module ActiveModel
-  class Serializer
+  class Serializer9
     class HasManyTest < Minitest::Test
       def setup
         @association = PostSerializer._associations[:comments]
@@ -145,7 +145,7 @@ module ActiveModel
       def test_associations_using_a_given_serializer
         @association.embed = :ids
         @association.embed_in_root = true
-        @association.serializer_from_options = Class.new(Serializer) do
+        @association.serializer_from_options = Class.new(Serializer9) do
           def content
             object.read_attribute_for_serialization(:content) + '!'
           end
